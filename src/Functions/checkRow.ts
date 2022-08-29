@@ -290,17 +290,27 @@ export const cpuTurn = (arr: any[]) => {
       }
     }
   }
-  // for (let i = 0; i < arr.length; i++) {
+  // for (let i = arr.length - 1; i >= 0; i--) {
   //   for (let j = 0; j < arr[i].length; j++) {
-  //     if (j !== 0 && j !== 1 && i !== arr.length - 2 && i !== arr.length - 1) {
+  //     if (j !== 1 && j !== 0 && i !== 1 && i !== 0) {
+  //       console.log('Cross if');
   //       if (
   //         arr[i][j] === 'x' &&
-  //         arr[i + 1][j - 1] === 'x' &&
-  //         arr[i + 2][j - 2] === 'x'
+  //         arr[i - 1][j + 1] === 'x' &&
+  //         arr[i - 2][j + 2] === '' &&
+  //         arr[i - 1][j + 2] !== ''
   //       ) {
-  //         console.log('X Wins');
-  //         return true;
+  //         console.log('Cross if if');
+  //         const index = {
+  //           i: i - 2,
+  //           j: j + 2,
+  //         };
+  //         return index;
+  //       } else {
+  //         console.log('Cross if else');
   //       }
+  //     } else {
+  //       console.log('Cross else');
   //     }
   //   }
   // }
